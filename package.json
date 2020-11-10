@@ -1,0 +1,34 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.tsx",
+  "scripts": {
+    "dev": "webpack --progress --performance-hints warning --mode development ./frontend/src/index.tsx --watch --output-path ./frontend/static/frontend --config webpack.dev.js",
+    "build": "webpack --progress --mode production ./frontend/src/index.tsx --output-path ./frontend/static/frontend --config webpack.prod.js"
+  },
+  "importSort": {
+    ".js, .jsx, .es6, .es, .mjs, .ts, .tsx": {
+      "parser": "babylon",
+      "style": "module"
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "bulma": "^0.9.1",
+    "npm": "^6.14.8",
+    "source-map-loader": "^1.1.2",
+    "ts-loader": "^8.0.4",
+    "typescript": "^3.9.7",
+    "webpack": "^5.3.2",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-cli": "^4.1.0",
+    "webpack-merge": "^5.2.0"
+  },
+  "dependencies": {
+    "react": "^16.13.0",
+    "react-bulma-components": "git://github.com/couds/react-bulma-components.git#next",
+    "react-dom": "^16.13.0"
+  }
+}
