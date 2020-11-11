@@ -5,7 +5,8 @@
   "main": "index.tsx",
   "scripts": {
     "dev": "webpack --progress --performance-hints warning --mode development ./frontend/src/index.tsx --watch --output-path ./frontend/static/frontend --config webpack.dev.js",
-    "build": "webpack --progress --mode production ./frontend/src/index.tsx --output-path ./frontend/static/frontend --config webpack.prod.js"
+    "build": "webpack --progress --mode production ./frontend/src/index.tsx --output-path ./frontend/static/frontend --config webpack.prod.js",
+    "test": "jest"
   },
   "importSort": {
     ".js, .jsx, .es6, .es, .mjs, .ts, .tsx": {
@@ -14,14 +15,18 @@
     }
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "@types/jest": "^26.0.14",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "babel-jest": "^26.6.3",
     "bulma": "^0.9.1",
+    "jest": "^26.0.14",
+    "jest-junit": "^12.0.0",
     "npm": "^6.14.8",
     "source-map-loader": "^1.1.2",
+    "ts-jest": "^26.4.0",
     "ts-loader": "^8.0.4",
     "typescript": "^3.9.7",
     "webpack": "^5.3.2",
@@ -30,6 +35,9 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "react": "^16.13.0",
     "react-bulma-components": "git://github.com/couds/react-bulma-components.git#next",
     "react-dom": "^16.13.0"
